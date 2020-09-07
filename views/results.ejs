@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+
+<div class="jumbotron">
+	<h1 style="text-align: center">Movie Result Page</h1>
+</div>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-9">
+			<div class="list-group">
+				<% data["Search"].forEach(movies=>{ %>
+					<div class="list-group-item">
+						<div class="d-flex w-100 justify-content-between">
+      						<h5 class="mb-1"><%= movies["Title"] %></h5>
+     			 			<small><%= movies["Year"] %></small>
+    					</div>
+					</div>
+				<% }); %>
+			</div><br>
+			<a href="/" style="border: 2px solid rgba(0,0,0,0.4)">Search again!</a><br><br>
+		</div>
+	</div>
+</div>
+
+
+
+<%- include("partials/footer") %>

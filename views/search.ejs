@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+<div class="jumbotron">
+	<h1 style="text-align: center">Search Movies</h1>
+</div>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-6">
+			<form action="/results" method="GET">
+  				<div class="form-group">
+   					<label for="movie">Enter Movie name</label>
+    				<input type="text" class="form-control" id="movie" name="search" placeholder="Movie name" aria-describedby="movieName">
+  				</div>
+  				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<%- include("partials/footer") %>
